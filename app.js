@@ -1,7 +1,8 @@
 
-function showMessage() {
-    document.getElementById("result").innerHTML =
-        "Congratulations! Your application is working!";
-}
+console.log("Kamlesh Singh Portfolio Loaded Successfully!");
 
-console.log("Static application loaded successfully!");
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("Website is ready!");
+
+});
