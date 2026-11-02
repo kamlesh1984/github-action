@@ -7,76 +7,179 @@
 
     <title>Kamlesh Singh | DevOps Engineer</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- Cache-busting version -->
+    <link rel="stylesheet" href="./styles.css?v=2">
 </head>
 
 <body>
 
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
 
-    <nav class="navbar">
-        <div class="logo">KS<span>.</span></div>
-        <div class="nav-text">MY DIGITAL SPACE</div>
-    </nav>
-
-    <main class="hero">
-
-        <div class="profile-card">
-
-            <div class="status">
-                <span class="status-dot"></span>
-                EXPLORING NEW TECHNOLOGIES
-            </div>
-
-            <p class="greeting">HELLO, WORLD!</p>
-
-            <h1>
-                I'm <span class="name">Kamlesh Singh</span>
-            </h1>
-
-            <h2>Senior DevOps Engineer</h2>
-
-            <p class="description">
-                Passionate about cloud technologies, automation,
-                infrastructure engineering and building scalable
-                solutions for the future.
-            </p>
-
-            <div class="skills">
-                <span>AWS</span>
-                <span>DevOps</span>
-                <span>Terraform</span>
-                <span>Docker</span>
-                <span>Kubernetes</span>
-                <span>CI/CD</span>
-            </div>
-
-            <div class="divider"></div>
-
-            <h3>My Technology Journey</h3>
-
-            <p class="journey">
-                Learn continuously. Build confidently.
-                Automate intelligently. Innovate endlessly.
-            </p>
-
-            <button onclick="showMessage()">
-                Explore My Journey →
-            </button>
-
-            <p id="result"></p>
-
+    <header class="navbar">
+        <a href="#" class="brand">KS<span>.</span></a>
+        <div class="nav-label">ENGINEERING THE FUTURE</div>
+        <div class="nav-status">
+            <span class="online-dot"></span>
+            AVAILABLE TO LEARN
         </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="online-dot"></span>
+                    WELCOME TO MY DIGITAL SPACE
+                </div>
+
+                <p class="intro">HELLO, WORLD! I'M</p>
+
+                <h1>
+                    Kamlesh <span>Singh.</span>
+                </h1>
+
+                <h2>Senior DevOps Engineer</h2>
+
+                <p class="description">
+                    I build, automate and optimize modern infrastructure.
+                    Passionate about cloud engineering, DevOps automation,
+                    scalable architecture and exploring AI-powered operations.
+                </p>
+
+                <div class="button-group">
+                    <a href="#expertise" class="primary-button">
+                        Explore My Skills ↗
+                    </a>
+
+                    <a href="#about" class="secondary-button">
+                        About Me
+                    </a>
+                </div>
+
+                <div class="quick-info">
+                    <div>
+                        <strong>10+</strong>
+                        <span>Years Experience</span>
+                    </div>
+
+                    <div class="info-divider"></div>
+
+                    <div>
+                        <strong>Cloud</strong>
+                        <span>Infrastructure</span>
+                    </div>
+
+                    <div class="info-divider"></div>
+
+                    <div>
+                        <strong>CI/CD</strong>
+                        <span>Automation</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="visual-card">
+
+                <div class="card-top">
+                    <span>DEVOPS ENGINEERING</span>
+                    <span class="live-indicator">● LIVE</span>
+                </div>
+
+                <div class="code-window">
+                    <div class="window-header">
+                        <span></span><span></span><span></span>
+                        <p>deployment.yml</p>
+                    </div>
+
+                    <div class="code-content">
+                        <p><span class="purple">name:</span> Production Pipeline</p>
+                        <p><span class="purple">on:</span> push</p>
+                        <br>
+                        <p><span class="blue">jobs:</span></p>
+                        <p class="indent"><span class="green">build:</span> success</p>
+                        <p class="indent"><span class="green">test:</span> passed</p>
+                        <p class="indent"><span class="green">deploy:</span> running</p>
+                        <br>
+                        <p><span class="green">✓</span> Automation enabled</p>
+                        <p><span class="green">✓</span> Infrastructure ready</p>
+                    </div>
+                </div>
+
+                <div class="card-bottom">
+                    <span>BUILD</span>
+                    <span>DEPLOY</span>
+                    <span>MONITOR</span>
+                    <span>REPEAT ↻</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="expertise" id="expertise">
+
+            <div class="section-heading">
+                <p class="section-tag">WHAT I WORK WITH</p>
+                <h2>Technology & Expertise</h2>
+                <p>Tools and technologies I use to build reliable systems.</p>
+            </div>
+
+            <div class="skill-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">☁</div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>AWS · EC2 · ECS · S3 · RDS · Networking</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">⚙</div>
+                    <h3>DevOps & Automation</h3>
+                    <p>Jenkins · GitHub Actions · CI/CD · Git</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">⌘</div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>Terraform · Docker · Kubernetes</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">◈</div>
+                    <h3>Monitoring & Security</h3>
+                    <p>CloudWatch · SonarQube · Security Automation</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="about" id="about">
+            <p class="section-tag">MY PHILOSOPHY</p>
+            <h2>Learn. Build. Automate. Innovate.</h2>
+            <p>
+                Technology never stops evolving, and neither does learning.
+                My journey is focused on building better solutions,
+                improving automation and embracing the next generation
+                of cloud and AI technologies.
+            </p>
+        </section>
 
     </main>
 
     <footer>
-        <p>Designed & Built with ❤️ by Kamlesh Singh</p>
+        <p>Designed & Built by <strong>Kamlesh Singh</strong></p>
         <p>Powered by GitHub Actions & GitHub Pages</p>
+        <p class="copyright">© 2026 All Rights Reserved.</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="./app.js?v=2"></script>
 
 </body>
 </html>
