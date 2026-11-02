@@ -1,5 +1,5 @@
 
-name: Static Application CI/CD
+name: Static Application CI-CD
 
 on:
   push:
@@ -16,39 +16,65 @@ permissions:
   contents: read
 
 jobs:
+
   build:
     name: Build Static Application
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+
+      # 1. Checkout source code
+      - name: Checkout Repository
         uses: actions/checkout@v6
 
-      - name: Verify Source Files
+      # 2. Display repository files
+      - name: Check Source Files
         run: |
+          echo "Checking application files..."
+          pwd
           ls -la
-          test -f index.html
 
-      - name: Create Build Directory
+      # 3. Validate required files
+      - name: Validate Application
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f app.js
+          echo "All application files found!"
+
+      # 4. Create build directory
+      - name: Build Application
         run: |
           mkdir -p dist
           cp index.html dist/
           cp styles.css dist/
           cp app.js dist/
 
+          echo "Build completed successfully!"
+
+      # 5. Verify build output
       - name: Verify Build
         run: |
+          echo "Checking build output..."
           ls -la dist/
-          test -f dist/index.html
 
-      - name: Upload Build Artifact
+          test -f dist/index.html
+          test -f dist/styles.css
+          test -f dist/app.js
+
+          echo "Build verification successful!"
+
+      # 6. Upload artifact for deployment
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist/
 
   deploy:
     name: Deploy to GitHub Pages
+
     needs: build
+
     if: github.event_name != 'pull_request'
 
     runs-on: ubuntu-latest
@@ -62,6 +88,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+
+      # 7. Deploy application
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # 8. Deployment status
+      - name: Deployment Successful
+        run: |
+          echo "Application deployed successfully!"
+          echo "Website: ${{ steps.deployment.outputs.page_url }}"
